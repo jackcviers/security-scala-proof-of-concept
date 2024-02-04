@@ -9,12 +9,12 @@ jobs:
   submit-dependency-graph:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v3
     - uses: coursier/cache-action@v6
-    - uses: actions/setup-java@v4
+    - uses: actions/setup-java@v3
       with:
         distribution: 'temurin'
         java-version: '17'
-    - name: Run dependabot submission
-      run: |
-           ./mill io.kipp.mill.github.dependency.graph.Graph/submit
+    - uses: ckipp01/mill-dependency-submission@v1
+      with:
+        plugin-version: "0.2.6"
