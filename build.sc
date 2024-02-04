@@ -36,6 +36,17 @@ object securityscalaproofofconcept extends ScalaModule {
       ivy"org.scala-lang.modules::scala-java8-compat:1.0.2",
       ivy"org.scala-lang:scala-library:2.13.11",
       ivy"org.scala-lang:scala-reflect:2.13.11",
+      ivy"org.typelevel::alleycats-core:2.8.0",
+      ivy"org.typelevel::cats-core:2.9.0",
+      ivy"org.typelevel::cats-effect-kernel:3.5.0",
+      ivy"org.typelevel::cats-effect:3.5.0",
+      ivy"org.typelevel::kittens:3.0.0",
+      ivy"org.typelevel::log4cats-core:2.6.0"
+    )
+
+  object test extends ScalaTests with TestModule.Munit {
+    def ivyDeps = Agg(
+      ivy"org.scalameta::munit:0.7.29",
       ivy"org.scalatest::scalatest-core:3.2.15",
       ivy"org.scalatest::scalatest-diagrams:3.2.15",
       ivy"org.scalatest::scalatest-featurespec:3.2.15",
@@ -47,18 +58,8 @@ object securityscalaproofofconcept extends ScalaModule {
       ivy"org.scalatest::scalatest-mustmatchers:3.2.15",
       ivy"org.scalatest::scalatest-propspec:3.2.15",
       ivy"org.scalatest::scalatest-refspec:3.2.15",
-      ivy"org.scalatest::scalatest-shouldmatchers:3.2.15",
-      ivy"org.typelevel::alleycats-core:2.8.0",
-      ivy"org.typelevel::cats-core:2.9.0",
-      ivy"org.typelevel::cats-effect-kernel:3.5.0",
-      ivy"org.typelevel::cats-effect:3.5.0",
-      ivy"org.typelevel::kittens:3.0.0",
-      ivy"org.typelevel::log4cats-core:2.6.0"
-    )
+      ivy"org.scalatest::scalatest-shouldmatchers:3.2.15"
 
-  object test extends ScalaTests with TestModule.Munit {
-    def ivyDeps = Agg(
-      ivy"org.scalameta::munit:0.7.29"
     )
     
   }
