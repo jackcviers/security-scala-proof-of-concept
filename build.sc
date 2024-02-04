@@ -1,7 +1,7 @@
 import mill._
 import mill.scalalib._
 
-import $ivy.`io.chris-kipp:mill-github-dependency-graph_mill0.11_2.13:0.2.6`
+// import $ivy.`io.chris-kipp:mill-github-dependency-graph_mill0.11_2.13:0.2.6`
 
 object securityscalaproofofconcept extends ScalaModule {
 

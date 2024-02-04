@@ -18,3 +18,5 @@ jobs:
     - uses: ckipp01/mill-dependency-submission@v1
       with:
         plugin-version: "0.2.6"
+      env:
+        GITHUB_TOKEN: ${{ secrets.DEPENDABOT_TOKEN }}
