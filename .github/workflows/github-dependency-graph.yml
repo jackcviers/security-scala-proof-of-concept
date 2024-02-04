@@ -15,4 +15,6 @@ jobs:
       with:
         distribution: 'temurin'
         java-version: '17'
-    - uses: ckipp01/mill-dependency-submission@v1.2.0
+    - name: Run dependabot submission
+		  run: |
+					 ./mill io.kipp.mill.github.dependency.graph.Graph/submit
